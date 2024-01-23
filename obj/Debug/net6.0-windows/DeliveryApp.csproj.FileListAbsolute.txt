@@ -1,5 +1,4 @@
 C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\obj\Debug\net6.0-windows\DeliveryApp.csproj.AssemblyReference.cache
-C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\obj\Debug\net6.0-windows\DeliveryApp.Form1.resources
 C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\obj\Debug\net6.0-windows\DeliveryApp.Resourses..resources
 C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\obj\Debug\net6.0-windows\DeliveryApp.Resourses.Window_Authorization.resources
 C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\obj\Debug\net6.0-windows\DeliveryApp.Resourses.Window_EditData.resources
@@ -21,3 +20,12 @@ C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\obj\Debug\net6.0-windows\Del
 C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\obj\Debug\net6.0-windows\DeliveryApp.genruntimeconfig.cache
 C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\obj\Debug\net6.0-windows\ref\DeliveryApp.dll
 C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\bin\Debug\net6.0-windows\linq2db.dll
+C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\obj\Debug\net6.0-windows\DeliveryApp.Form1.resources
+C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\bin\Debug\net6.0-windows\JWT.dll
+C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\wiusm\source\repos\DeliveryApp\DeliveryApp\obj\Debug\net6.0-windows\DeliveryApp.sourcelink.json
