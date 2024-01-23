@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             menuStrip1 = new MenuStrip();
             ToolStripMenuItem_FoodType = new ToolStripMenuItem();
             ToolStripMenuItem_Food = new ToolStripMenuItem();
@@ -37,14 +38,17 @@
             ToolStripMenuItem_OrderStatus = new ToolStripMenuItem();
             ToolStripMenuItem_Worker = new ToolStripMenuItem();
             ToolStripMenuItem_Role = new ToolStripMenuItem();
-            dataGridView1 = new DataGridView();
             Button_AddData = new Button();
             Button_EditData = new Button();
             Button_DeleteData = new Button();
-            Button_SaveData = new Button();
-            Button_CancelChanges = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            dataGridView1 = new DataGridView();
+            flowLayoutPanel_grids = new FlowLayoutPanel();
+            timer1 = new System.Windows.Forms.Timer(components);
             menuStrip1.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            flowLayoutPanel_grids.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -52,78 +56,78 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { ToolStripMenuItem_FoodType, ToolStripMenuItem_Food, ToolStripMenuItem_Basket, ToolStripMenuItem_User, ToolStripMenuItem_Order, ToolStripMenuItem_OrderStatus, ToolStripMenuItem_Worker, ToolStripMenuItem_Role });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(942, 24);
+            menuStrip1.Size = new Size(725, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // ToolStripMenuItem_FoodType
             // 
             ToolStripMenuItem_FoodType.Name = "ToolStripMenuItem_FoodType";
-            ToolStripMenuItem_FoodType.Size = new Size(75, 20);
-            ToolStripMenuItem_FoodType.Text = "Food_Type";
+            ToolStripMenuItem_FoodType.Size = new Size(72, 20);
+            ToolStripMenuItem_FoodType.Tag = "Food_Type";
+            ToolStripMenuItem_FoodType.Text = "Типы еды";
             ToolStripMenuItem_FoodType.Click += ToolStripMenuItem_FoodType_Click;
             // 
             // ToolStripMenuItem_Food
             // 
             ToolStripMenuItem_Food.Name = "ToolStripMenuItem_Food";
-            ToolStripMenuItem_Food.Size = new Size(46, 20);
-            ToolStripMenuItem_Food.Text = "Food";
+            ToolStripMenuItem_Food.Size = new Size(55, 20);
+            ToolStripMenuItem_Food.Tag = "Food";
+            ToolStripMenuItem_Food.Text = "Блюда";
             ToolStripMenuItem_Food.Click += ToolStripMenuItem_Food_Click;
             // 
             // ToolStripMenuItem_Basket
             // 
             ToolStripMenuItem_Basket.Name = "ToolStripMenuItem_Basket";
-            ToolStripMenuItem_Basket.Size = new Size(53, 20);
-            ToolStripMenuItem_Basket.Text = "Basket";
+            ToolStripMenuItem_Basket.Size = new Size(65, 20);
+            ToolStripMenuItem_Basket.Tag = "Basket";
+            ToolStripMenuItem_Basket.Text = "Корзина";
+            ToolStripMenuItem_Basket.Visible = false;
             ToolStripMenuItem_Basket.Click += ToolStripMenuItem_Basket_Click;
             // 
             // ToolStripMenuItem_User
             // 
             ToolStripMenuItem_User.Name = "ToolStripMenuItem_User";
-            ToolStripMenuItem_User.Size = new Size(42, 20);
-            ToolStripMenuItem_User.Text = "User";
+            ToolStripMenuItem_User.Size = new Size(67, 20);
+            ToolStripMenuItem_User.Tag = "User";
+            ToolStripMenuItem_User.Text = "Клиенты";
             ToolStripMenuItem_User.Click += ToolStripMenuItem_User_Click;
             // 
             // ToolStripMenuItem_Order
             // 
             ToolStripMenuItem_Order.Name = "ToolStripMenuItem_Order";
-            ToolStripMenuItem_Order.Size = new Size(49, 20);
-            ToolStripMenuItem_Order.Text = "Order";
+            ToolStripMenuItem_Order.Size = new Size(58, 20);
+            ToolStripMenuItem_Order.Tag = "Order";
+            ToolStripMenuItem_Order.Text = "Заказы";
             ToolStripMenuItem_Order.Click += ToolStripMenuItem_Order_Click;
             // 
             // ToolStripMenuItem_OrderStatus
             // 
             ToolStripMenuItem_OrderStatus.Name = "ToolStripMenuItem_OrderStatus";
-            ToolStripMenuItem_OrderStatus.Size = new Size(86, 20);
-            ToolStripMenuItem_OrderStatus.Text = "Order_Status";
+            ToolStripMenuItem_OrderStatus.Size = new Size(108, 20);
+            ToolStripMenuItem_OrderStatus.Tag = "Order_Status";
+            ToolStripMenuItem_OrderStatus.Text = "Статусы заказов";
             ToolStripMenuItem_OrderStatus.Click += ToolStripMenuItem_OrderStatus_Click;
             // 
             // ToolStripMenuItem_Worker
             // 
             ToolStripMenuItem_Worker.Name = "ToolStripMenuItem_Worker";
-            ToolStripMenuItem_Worker.Size = new Size(57, 20);
-            ToolStripMenuItem_Worker.Text = "Worker";
+            ToolStripMenuItem_Worker.Size = new Size(85, 20);
+            ToolStripMenuItem_Worker.Tag = "Worker";
+            ToolStripMenuItem_Worker.Text = "Сотрудники";
             ToolStripMenuItem_Worker.Click += ToolStripMenuItem_Worker_Click;
             // 
             // ToolStripMenuItem_Role
             // 
             ToolStripMenuItem_Role.Name = "ToolStripMenuItem_Role";
-            ToolStripMenuItem_Role.Size = new Size(42, 20);
-            ToolStripMenuItem_Role.Text = "Role";
+            ToolStripMenuItem_Role.Size = new Size(47, 20);
+            ToolStripMenuItem_Role.Tag = "Role";
+            ToolStripMenuItem_Role.Text = "Роли";
             ToolStripMenuItem_Role.Click += ToolStripMenuItem_Role_Click;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 27);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(918, 753);
-            dataGridView1.TabIndex = 1;
             // 
             // Button_AddData
             // 
-            Button_AddData.Location = new Point(12, 791);
+            Button_AddData.Location = new Point(3, 3);
             Button_AddData.Name = "Button_AddData";
             Button_AddData.Size = new Size(123, 23);
             Button_AddData.TabIndex = 2;
@@ -133,7 +137,7 @@
             // 
             // Button_EditData
             // 
-            Button_EditData.Location = new Point(141, 791);
+            Button_EditData.Location = new Point(132, 3);
             Button_EditData.Name = "Button_EditData";
             Button_EditData.Size = new Size(143, 23);
             Button_EditData.TabIndex = 3;
@@ -143,7 +147,7 @@
             // 
             // Button_DeleteData
             // 
-            Button_DeleteData.Location = new Point(290, 791);
+            Button_DeleteData.Location = new Point(281, 3);
             Button_DeleteData.Name = "Button_DeleteData";
             Button_DeleteData.Size = new Size(143, 23);
             Button_DeleteData.TabIndex = 4;
@@ -151,67 +155,81 @@
             Button_DeleteData.UseVisualStyleBackColor = true;
             Button_DeleteData.Click += Button_DeleteData_Click;
             // 
-            // Button_SaveData
+            // flowLayoutPanel1
             // 
-            Button_SaveData.Location = new Point(508, 791);
-            Button_SaveData.Name = "Button_SaveData";
-            Button_SaveData.Size = new Size(143, 23);
-            Button_SaveData.TabIndex = 5;
-            Button_SaveData.Text = "Сохранить таблицу";
-            Button_SaveData.UseVisualStyleBackColor = true;
-            Button_SaveData.Click += Button_SaveData_Click;
+            flowLayoutPanel1.Controls.Add(Button_AddData);
+            flowLayoutPanel1.Controls.Add(Button_EditData);
+            flowLayoutPanel1.Controls.Add(Button_DeleteData);
+            flowLayoutPanel1.Dock = DockStyle.Bottom;
+            flowLayoutPanel1.Location = new Point(0, 422);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(725, 32);
+            flowLayoutPanel1.TabIndex = 7;
             // 
-            // Button_CancelChanges
+            // dataGridView1
             // 
-            Button_CancelChanges.Enabled = false;
-            Button_CancelChanges.Location = new Point(657, 791);
-            Button_CancelChanges.Name = "Button_CancelChanges";
-            Button_CancelChanges.Size = new Size(143, 23);
-            Button_CancelChanges.TabIndex = 6;
-            Button_CancelChanges.Text = "Отменить изменения";
-            Button_CancelChanges.UseVisualStyleBackColor = true;
-            Button_CancelChanges.Click += Button_CancelChanges_Click;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(3, 3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(719, 395);
+            dataGridView1.TabIndex = 8;
+            // 
+            // flowLayoutPanel_grids
+            // 
+            flowLayoutPanel_grids.Controls.Add(dataGridView1);
+            flowLayoutPanel_grids.Dock = DockStyle.Fill;
+            flowLayoutPanel_grids.Location = new Point(0, 24);
+            flowLayoutPanel_grids.Name = "flowLayoutPanel_grids";
+            flowLayoutPanel_grids.Size = new Size(725, 398);
+            flowLayoutPanel_grids.TabIndex = 9;
+            // 
+            // timer1
+            // 
+            timer1.Interval = 2400;
+            timer1.Tick += timer1_Tick;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(942, 827);
-            Controls.Add(Button_CancelChanges);
-            Controls.Add(Button_SaveData);
-            Controls.Add(Button_DeleteData);
-            Controls.Add(Button_EditData);
-            Controls.Add(Button_AddData);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(725, 454);
+            Controls.Add(flowLayoutPanel_grids);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            MinimumSize = new Size(741, 493);
             Name = "Form1";
-            Text = "DeliveryApp";
+            Text = "DeliveryApp Adminitrating Tool";
+            FormClosed += Form1_FormClosed;
             Load += Form1_Load;
+            SizeChanged += Form1_SizeChanged;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            flowLayoutPanel_grids.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem ToolStripMenuItem_FoodType;
-        private ToolStripMenuItem ToolStripMenuItem_Food;
-        private ToolStripMenuItem ToolStripMenuItem_Basket;
-        private ToolStripMenuItem ToolStripMenuItem_User;
-        private ToolStripMenuItem ToolStripMenuItem_Order;
-        private ToolStripMenuItem ToolStripMenuItem_OrderStatus;
-        private ToolStripMenuItem ToolStripMenuItem_Worker;
-        private ToolStripMenuItem ToolStripMenuItem_Role;
-        private DataGridView dataGridView1;
-        private Button Button_AddData;
-        private Button Button_EditData;
-        private Button Button_DeleteData;
-        private Button Button_SaveData;
-        private Button Button_CancelChanges;
-
+        public MenuStrip menuStrip1;
+        public ToolStripMenuItem ToolStripMenuItem_FoodType;
+        public ToolStripMenuItem ToolStripMenuItem_Food;
+        public ToolStripMenuItem ToolStripMenuItem_Basket;
+        public ToolStripMenuItem ToolStripMenuItem_User;
+        public ToolStripMenuItem ToolStripMenuItem_Order;
+        public ToolStripMenuItem ToolStripMenuItem_OrderStatus;
+        public ToolStripMenuItem ToolStripMenuItem_Worker;
+        public ToolStripMenuItem ToolStripMenuItem_Role;
+        public Button Button_AddData;
+        public Button Button_EditData;
+        public Button Button_DeleteData;
+        public FlowLayoutPanel flowLayoutPanel1;
+        public DataGridView dataGridView1;
+        public FlowLayoutPanel flowLayoutPanel_grids;
+        private System.Windows.Forms.Timer timer1;
     }
 }
