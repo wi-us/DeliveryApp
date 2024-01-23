@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             menuStrip1 = new MenuStrip();
             ToolStripMenuItem_FoodType = new ToolStripMenuItem();
             ToolStripMenuItem_Food = new ToolStripMenuItem();
@@ -197,6 +198,7 @@
             Controls.Add(flowLayoutPanel_grids);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MinimumSize = new Size(741, 493);
             Name = "Form1";

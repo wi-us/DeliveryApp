@@ -104,6 +104,7 @@
             Controls.Add(TextBox_Login);
             Controls.Add(Label_Password);
             Controls.Add(Label_Login);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Window_Authorization";
             Text = "Авторизация";
             FormClosed += Window_Authorization_FormClosed;
